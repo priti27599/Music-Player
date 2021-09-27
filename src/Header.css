@@ -1,0 +1,36 @@
+.header{
+    display:flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    height: 30px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 70vw;
+    margin: 0 auto;
+    max-width: 860px;
+}
+.input{
+    width: 60vw;
+    border: none;
+}
+
+.input:focus{
+    outline-width: 0;
+}
+
+.text {
+    font-size: 25px;
+    color: black;
+    
+}
+.header .text a{
+    text-decoration: none;
+}

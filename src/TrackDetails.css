@@ -1,0 +1,21 @@
+.track-details{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.item-content{
+    display: flex;
+    margin-top: 3%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+    transition: transform .3s ease;
+}
+.details{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+span{
+    font-weight: 500;
+}

@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import Header from './Header'
+import Section from './Section'
+import Cards from './Cards'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import TrackDetails from './TrackDetails'
+import All from './All'
+import Trending from './Trending'
+import useFetch from './useFetch';
+import New from './New'
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Section />
+            <Cards />
+          </Route>
+          <Route path='/All'>
+            <All />
+          </Route>
+          <Route path='/Trending'>
+            <Trending />
+          </Route>
+          <Route path='/New'>
+            <New />
+          </Route>
+          <Route path="/items/:id">
+            <TrackDetails />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  )
 }
 
-export default App;
+export default App
